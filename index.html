@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DaRed!</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="dared ico url.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -38,9 +40,20 @@
 
   <!-- Rodapé -->
   <footer>
-    © 2025, <strong>DaRed!</strong>. Todos os direitos reservados.
+    <p>© 2025 DaRedCloth</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("sideMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function showAbout() {
+      var aboutText = document.getElementById("aboutText");
+      aboutText.style.display = aboutText.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>

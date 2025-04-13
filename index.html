@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DaRed!</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="dared ico url.png" />
+
+  <!-- Font Awesome para o ícone do Instagram -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Barra superior com ícone -->
   <div class="top-bar">
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <img src="capetinha.png" alt="Logo Capetinha" class="capetinha" />
@@ -20,27 +27,30 @@
   </div>
 
   <!-- Texto 'em breve' -->
-  <h1 class="em-breve">em breve</h1>
+  <h1 class="em-breve">Em breve...</h1>
 
-  <!-- Logo DaRed como imagem -->
+  <!-- Logo DaRed -->
   <div class="central-logo">
     <img src="dared!.png" alt="DaRed!" />
   </div>
 
-  <!-- Formulário -->
+  <!-- Formulário de e-mail -->
   <form action="https://formspree.io/f/xqapnjvg" method="POST" class="email-form">
     <input type="email" name="email" placeholder="Seu melhor e-mail" required />
     <button type="submit">Me mantenha informado</button>
   </form>
 
-  <!-- Sobre nós -->
+  <!-- Texto 'Sobre nós' -->
   <div id="aboutText" class="about-text">
     Seja ousado, seja DaRed.
   </div>
 
-  <!-- Rodapé -->
+  <!-- Rodapé com Instagram -->
   <footer>
-    <p>© 2025 DaRedCloth</p>
+    <div class="instagram-handle">
+      <i class="fab fa-instagram"></i> @dared.cloth
+    </div>
+    <p>© 2025 DaRedCloth. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Scripts -->

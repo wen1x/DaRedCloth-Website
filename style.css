@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-image: url('fundo-dared.jpg'); /* Troque pelo nome da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay escuro sobre o fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique acima do overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cabeçalho */
+.top-bar {
+  background-color: red;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.capetinha {
+  height: 40px;
+}
+
+/* Ícone do menu hambúrguer */
+.menu-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Menu lateral */
+.side-menu {
+  position: fixed;
+  left: -200px;
+  top: 60px;
+  width: 200px;
+  height: 100%;
+  background-color: #111;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+  z-index: 11;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.side-menu a:hover {
+  background-color: #333;
+}
+
+/* Título "em breve" */
+.em-breve {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 42px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 150px; /* Espaço aumentado abaixo */
+  color: white;
+}
+
+/* Logo central como imagem */
+.central-logo {
+  text-align: center;
+  margin-bottom: 60px; /* Espaço aumentado abaixo do logo */
+}
+
+.central-logo img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Formulário */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+}
+
+.email-form button {
+  padding: 10px;
+  width: 250px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-color: #cc0000;
+}
+
+/* Texto "sobre nós" */
+.about-text {
+  display: none;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+  color: #ddd;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 14px;
+  color: #ccc;
+  opacity: 0.5; /* ← Opacidade do texto do rodapé */
+}

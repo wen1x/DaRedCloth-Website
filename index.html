@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DaRed!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <img src="capetinha.png" alt="Logo Capetinha" class="capetinha" />
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="#" onclick="showAbout()">Sobre nós</a>
+  </div>
+
+  <!-- Texto 'em breve' -->
+  <h1 class="em-breve">em breve</h1>
+
+  <!-- Logo DaRed como imagem -->
+  <div class="central-logo">
+    <img src="dared!.png" alt="DaRed!" />
+  </div>
+
+  <!-- Formulário -->
+  <form action="https://formspree.io/f/xqapnjvg" method="POST" class="email-form">
+    <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+    <button type="submit">Me mantenha informado</button>
+  </form>
+
+  <!-- Sobre nós -->
+  <div id="aboutText" class="about-text">
+    Seja ousado, seja DaRed.
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025, <strong>DaRed!</strong>. Todos os direitos reservados.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

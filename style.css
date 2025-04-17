@@ -29,6 +29,24 @@ body::before {
   z-index: 0;
 }
 
+body {
+  background-image: url('fundo.jpg'); /* ajuste o caminho se estiver em outra pasta */
+  background-size: cover;           /* cobre toda a tela */
+  background-position: center;      /* centraliza */
+  background-repeat: no-repeat;     /* não repete */
+  background-attachment: fixed;     /* fixo ao rolar a página */
+  color: white;                     /* cor do texto, se necessário */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* camada escura transparente */
+  z-index: -1;
+}
+
 /* Garante que o conteúdo fique acima do overlay */
 body > * {
   position: relative;
@@ -57,6 +75,70 @@ body > * {
   color: black;
   cursor: pointer;
 }
+
+/* Botão Sacola */
+#cart-button {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 0, 0, 0.15);
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1100;
+  transition: opacity 0.3s ease;
+}
+
+#cart-button img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(1.2) drop-shadow(0 0 2px red);
+}
+
+/* Sidebar */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(15, 15, 15, 0.95);
+  color: #fff;
+  box-shadow: -4px 0 15px rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  transition: right 0.4s ease;
+  padding: 24px;
+  z-index: 1050;
+}
+
+/* Sidebar ativa */
+#cart-sidebar.open {
+  right: 0;
+}
+
+/* Botão de fechar */
+#cart-sidebar .close-btn {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
+
+/* Oculta o botão quando a sidebar está aberta */
+body.sidebar-open #cart-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Menu lateral */
 .side-menu {
@@ -153,5 +235,5 @@ footer {
   margin-top: 300px;
   font-size: 14px;
   color: #ccc;
-  opacity: 0.5; /* ← Opacidade do texto do rodapé */
+  opacity: 1; /* ← Opacidade do texto do rodapé */
 }

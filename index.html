@@ -21,6 +21,18 @@
     <img src="capetinha.png" alt="Logo Capetinha" class="capetinha" />
   </div>
 
+<!-- Botão da sacola -->
+<div id="cart-button" onclick="toggleSidebar()">
+  <img src="sacola.png" alt="Sacola">
+</div>
+
+<!-- Sidebar da sacola -->
+<div id="cart-sidebar">
+  <button class="close-btn" onclick="toggleSidebar()">×</button>
+  <h2>Sacola</h2>
+  <p>Sua sacola está vazia.</p>
+</div>
+
   <!-- Menu lateral -->
   <div class="side-menu" id="sideMenu">
     <a href="#" onclick="showAbout()">Sobre nós</a>
@@ -31,7 +43,7 @@
 
   <!-- Logo DaRed -->
   <div class="central-logo">
-    <img src="dared!.png" alt="DaRed!" />
+    <img src="daredv2.png" alt="DaRed!" />
   </div>
 
   <!-- Formulário de e-mail -->
@@ -45,8 +57,11 @@
     Seja ousado, seja DaRed.
   </div>
 
-  <!-- Rodapé com Instagram -->
+    <!-- Outros conteúdos do rodapé -->
   <footer>
+    <a href="https://www.instagram.com/dared.cloth/" target="_blank" rel="noopener noreferrer">
+      <img src="instaicon_red.png" alt="Instagram" style="width: 24px; height: 24px;">
+    </a>
     <div class="instagram-handle">
       <i class="fab fa-instagram"></i> @dared.cloth
     </div>
@@ -65,6 +80,22 @@
       aboutText.style.display = aboutText.style.display === "block" ? "none" : "block";
     }
   </script> 
-  <script src="script.js"></script>
+ <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('cart-sidebar');
+    const body = document.body;
+
+    const isOpen = sidebar.classList.contains('open');
+
+    if (isOpen) {
+      sidebar.classList.remove('open');
+      body.classList.remove('sidebar-open');
+    } else {
+      sidebar.classList.add('open');
+      body.classList.add('sidebar-open');
+    }
+  }
+</script>
+
 </body>
 </html>

@@ -21,14 +21,15 @@
     <img src="capetinha.png" alt="Logo Capetinha" class="capetinha" />
   </div>
 
-<!-- Botão da sacola -->
+<!-- Botão da Sacola no canto superior direito -->
 <div id="cart-button" onclick="toggleSidebar()">
   <img src="sacola.png" alt="Sacola">
 </div>
 
-<!-- Sidebar da sacola -->
+
+<!-- Sidebar da Sacola -->
 <div id="cart-sidebar">
-  <button class="close-btn" onclick="toggleSidebar()">×</button>
+  <div class="close-btn" onclick="toggleSidebar()">×</div>
   <h2>Sacola</h2>
   <p>Sua sacola está vazia.</p>
 </div>
@@ -80,22 +81,16 @@
       aboutText.style.display = aboutText.style.display === "block" ? "none" : "block";
     }
   </script> 
- <script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById('cart-sidebar');
-    const body = document.body;
-
-    const isOpen = sidebar.classList.contains('open');
-
-    if (isOpen) {
-      sidebar.classList.remove('open');
-      body.classList.remove('sidebar-open');
-    } else {
-      sidebar.classList.add('open');
-      body.classList.add('sidebar-open');
+  <script src="script.js"></script>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('cart-sidebar');
+      const body = document.body;
+  
+      sidebar.classList.toggle('open');
+      body.classList.toggle('sidebar-open');
     }
-  }
-</script>
-
+  </script>
+  
 </body>
 </html>
